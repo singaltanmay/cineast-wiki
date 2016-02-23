@@ -3,7 +3,7 @@ Cineast is a multi-feature content-based video retrieval engine. It is capable o
 
 Find more information on Cineast in the following publications:
 
-- Luca Rossetto, Ivan Giangreco and Heiko Schuldt (2015): Cineast: A Multi-Feature Sketch-Based Video Retrieval Engine. Proceedings of the 16th IEEE International Symposium on Multimedia (ISM2014). Taichung, Taiwan. (http://dx.doi.org/10.1109/ISM.2014.38)
+- Luca Rossetto, Ivan Giangreco and Heiko Schuldt (2014): Cineast: A Multi-Feature Sketch-Based Video Retrieval Engine. Proceedings of the 16th IEEE International Symposium on Multimedia (ISM2014). Taichung, Taiwan. (http://dx.doi.org/10.1109/ISM.2014.38)
 
 - Luca Rossetto, Ivan Giangreco, Silvan Heller, Claudiu Tănase, and Heiko Schuldt (2016): Searching in Video Collections using Sketches and Sample Images - The Cineast System. Proceedings of the 22nd International Conference on Multimedia Modeling (MMM 2016). Miami, FL, USA. (http://dx.doi.org/10.1007/978-3-319-27674-8_30)
 
