@@ -1,4 +1,4 @@
-Cineast is a multi-feature content-based video retrieval engine. It is capable of retrieving video sequences based on edge or color sketches and sketch-based motion queries.
+Cineast is a multi-feature content-based mulitmedia retrieval engine. It is capable of retrieving images, audio- and video sequences as well as 3d models based on edge or color sketches, sketch-based motion queries and example objects.
 
 
 Find more information on Cineast in the following publications:
@@ -7,4 +7,4 @@ Find more information on Cineast in the following publications:
 
 - Luca Rossetto, Ivan Giangreco, Silvan Heller, Claudiu Tănase, and Heiko Schuldt (2016): Searching in Video Collections using Sketches and Sample Images - The Cineast System. Proceedings of the 22nd International Conference on Multimedia Modeling (MMM 2016). Miami, FL, USA. (http://dx.doi.org/10.1007/978-3-319-27674-8_30)
 
-Cineast is being developed in the course of the iMotion project (http://imotion-project.eu) at the Databases and Information Systems Research Group (http://dbis.cs.unibas.ch) at the University of Basel, Switzerland.
+Cineast is part of the vitrivr stack (https://vitrivr.org) and is being developed at the Databases and Information Systems Research Group (http://dbis.cs.unibas.ch) at the University of Basel, Switzerland. Cineast has its roots in the iMotion project (http://imotion-project.eu).
