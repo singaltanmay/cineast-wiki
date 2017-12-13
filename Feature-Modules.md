@@ -1,3 +1,5 @@
+***THIS PAGE IS CURRENTLY OUT OF DATE AND WILL BE UPDATED SOON***
+
 # Feature Modules
 This page lists the feature modules which cineast uses for feature extraction and retrieval.
 
