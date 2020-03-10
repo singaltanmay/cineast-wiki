@@ -6,42 +6,32 @@ This is a guide on how to set-up your local development environment to contribut
 
 # Note
 
-**This guide w.r.t. the [`multi-module` branch](https://github.com/vitrivr/cineast/tree/multi-module).**
+**This guide is w.r.t. the [`dev` branch](https://github.com/vitrivr/cineast/tree/dev).**
 
 ---
 
 ## Prerequisites
 
 It is expected that you have a JDK installed.
-We recommend one provided by [Open JDK](https://openjdk.java.net/install/).
-Minimal version is JDK for Java SE 8.
+We recommend one provided by [Open JDK](https://openjdk.java.net/install/). Please develop on JDK 11+.
 
 Furthermore, you also have to clone the storage layer, [CottontailDB](https://github.com/ppanopticon/cottontaildb).
-As of CottontailDB's [current version](https://github.com/ppanopticon/cottontaildb/commit/bc25f6be57b93f0658404025706204ff5f24f830), the steps to prepare your local CottontailDB instance are as follows:
+Setup cottontail as follows:
 
 1. Clone [CottontailDB](https://github.com/ppanopticon/cottontaildb.git):
 
 ```
 git clone --recursive https://github.com/ppanopticon/cottontaildb.git
 ```
+(If you've already cloned cottontailDB without the recursive flag, execute ```git submodule update --init --recursive```)
 
 2. Setup and build CottontailDB:
 
 ```
-$> ./gradlew clean generateProto generateGrammarSource build
+$> ./gradlew generateProto run
 ```
 
-3. Run CottontailDB
-
-```
-$> java -jar build/libs/cottontaildb.jar
-```
-
-0. Whenever required, update the submodules:
-
-```
-$> git submodule update --init --recursive
-```
+_Windows users beware! Adopt the configuration for windows beforehand by changing the_ `forceUnmapMappedFiles` _property to_ `true`.
 
 ## Setup
 
@@ -53,18 +43,11 @@ These are your next steps:
 ```
 $> git clone --recursive https://github.com/vitrivr/cineast.git
 ```
-
-2. Build Cineast
-
+(If you've already cloned cineast without the recursive flag, execute ```git submodule update --init --recursive```)
+4. Open `build.gradle` with your IDE. This requires the IDE supports [Gradle].
+5. Generate the protobuf bindings using Gradle:
 ```
-$> ./gradlew clean generateProto build
+$> ./gradlew clean generateProto
 ```
 
-By now, you should have all the required dependencies and preparation steps performed.
-To actually test / debug cineast now, you would use
-
-`org.vitrivr.cineast.api.Main` as main class.
-
-It has **one mandatory argument**; the config (`cineast.json`).
-
-__More coming soon(tm)__
+You're now ready to develop!
