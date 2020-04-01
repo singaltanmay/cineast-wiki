@@ -50,4 +50,8 @@ $> git clone --recursive https://github.com/vitrivr/cineast.git
 $> ./gradlew clean generateProto
 ```
 
+2. Download external files, such as codebooks by executing
+```
+$> gradlew getExternalFiles
+````
 You're now ready to develop!
