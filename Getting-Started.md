@@ -4,7 +4,8 @@ This page provides a quick example to get started with two scenarios: Working _w
 This scenario assumes the following:
 - You have a running cottontailDB instance with a `cdottontaildb-data/` folder containing cineast data (segments, objects, metadata, feature data)
 
-## Starting the API
+## Starting the API ##
+
 Starting the API is done via the `org.vitrivr.cineast.api.Main` class, which takes one argument: the config file (e.g. `cineast.json`). Depending on the configuration, this launches the WS / Rest / Proto Endpoints.
 
 Make sure that the `retriever` modules are consistent with those in your cottontail instance.
