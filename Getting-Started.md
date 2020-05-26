@@ -6,6 +6,11 @@ This scenario assumes the following:
 
 ## Starting the API ##
 
+### Using Gradle ###
+Generate the api jar using `gradlew cineast-api:fatJar`. You can then start cineast using a config file with `java -jar cineast-api/build/libs/cineast-api-2.5-full.jar cineast.json`
+
+### Inside an IDE ###
+
 Starting the API is done via the `org.vitrivr.cineast.api.Main` class, which takes one argument: the config file (e.g. `cineast.json`). Depending on the configuration, this launches the WS / Rest / Proto Endpoints.
 
 Make sure that the `retriever` modules are consistent with those in your cottontail instance.
