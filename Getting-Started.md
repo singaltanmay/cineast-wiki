@@ -1,8 +1,8 @@
-This page provides a quick example to get started with two scenarios: Working _with_ already extracted features, and working with a small multimedia collection.
+This page provides a quick example to get started with two scenarios: Working _with_ already extracted features, and working with a small multimedia collection. Both scenarios assume that you either have a jar or have executed the setup as described on the [Dev Setup](https://github.com/vitrivr/cineast/wiki/Development-Environment-Setup) Page
 
 # Extracted Features
 This scenario assumes the following:
-- You have a running cottontailDB instance with a `cdottontaildb-data/` folder containing cineast data (segments, objects, metadata, feature data)
+- You have a running cottontailDB instance with a `cottontaildb-data/` folder containing cineast data (segments, objects, metadata, feature data)
 
 ## Starting the API ##
 
