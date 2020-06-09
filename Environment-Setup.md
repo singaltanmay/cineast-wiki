@@ -1,15 +1,6 @@
-# Development Environment Setup
+# Environment Setup
 
-This is a guide on how to set-up your local development environment to contribute to cineast.
-
----
-
-# Note
-
-**This guide is w.r.t. the [`dev` branch](https://github.com/vitrivr/cineast/tree/dev).**
-
----
-
+This is a guide on how to set-up your local environment to contribute to and use cineast.
 ## Prerequisites
 
 It is expected that you have a JDK installed.
@@ -39,4 +30,4 @@ $> ./gradlew clean generateProto
 ```
 $> gradlew getExternalFiles
 ````
-You're now ready to develop!
+You're now ready!
