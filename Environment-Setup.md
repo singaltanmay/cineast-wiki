@@ -30,4 +30,4 @@ $> ./gradlew clean generateProto
 ```
 $> gradlew getExternalFiles
 ````
-You're now ready!
+You're now ready! Proceed with the [Getting Started](https://github.com/vitrivr/cineast/wiki/Getting-Started) page
