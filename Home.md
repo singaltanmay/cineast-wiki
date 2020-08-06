@@ -8,3 +8,7 @@ Find more information on Cineast in the following publications:
 - Luca Rossetto, Ivan Giangreco, Silvan Heller, Claudiu Tănase, and Heiko Schuldt (2016): Searching in Video Collections using Sketches and Sample Images - The Cineast System. Proceedings of the 22nd International Conference on Multimedia Modeling (MMM 2016). Miami, FL, USA. (http://dx.doi.org/10.1007/978-3-319-27674-8_30)
 
 Cineast is part of the vitrivr stack (https://vitrivr.org) and is being developed at the Databases and Information Systems Research Group (http://dbis.cs.unibas.ch) at the University of Basel, Switzerland. Cineast has its roots in the iMotion project (http://imotion-project.eu).
+
+## Getting Started
+
+To get started with Cineast, [set up your development environment](https://github.com/vitrivr/cineast/wiki/Environment-Setup) and have a look at the [Getting Started guide](https://github.com/vitrivr/cineast/wiki/Getting-Started).
