@@ -1,6 +1,5 @@
-# Environment Setup
-
 This is a guide on how to set-up your local environment to contribute to and use cineast.
+
 ## Prerequisites
 
 It is expected that you have a JDK installed.
