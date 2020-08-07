@@ -8,9 +8,9 @@ Additionally, Cineast has two entry points: `API` and `Standalone`. The `Standal
 
 ## Building with Gradle
 
-Generate the API jar with `gradlew cineast-api:fatJar` or the Standalone jar with `gradlew cineast-runtime:fatJar`. You can then start Cineast using a config file with `java -jar cineast-api/build/libs/cineast-api-2.5-full.jar cineast.json` or run a command using the standalone version with `java -jar cineast-runtime/build/libs/cineast-runtime-2.5-full.jar cineast.json <command>`.
+Generate the API jar with `gradlew cineast-api:fatJar` or the Standalone jar with `gradlew cineast-runtime:fatJar`. You can then start Cineast using a config file with `java -jar cineast-api/build/libs/cineast-api-x.x-full.jar cineast.json` or run a command using the standalone version with `java -jar cineast-runtime/build/libs/cineast-runtime-x.x-full.jar cineast.json <command>`.
 
-## Inside an IDE
+## Building with an IDE
 
 Starting the API is done via the `org.vitrivr.cineast.api.Main` class, which takes one argument: the config file (e.g. `cineast.json`). Depending on the configuration, this launches the WS / Rest / Proto Endpoints.
 
@@ -83,4 +83,4 @@ To retrieve all metadata and features of a segment, use the `org.vitrivr.cineast
 
 ## Retrieval with a User Interface
 
-To actually search your collection, check out for example [vitrivr-ng](https://github.com/vitrivr/vitrivr-ng) as a frontend for cineast
+To actually search your collection, you can use [vitrivr-ng](https://github.com/vitrivr/vitrivr-ng) as a frontend for cineast.
