@@ -56,6 +56,6 @@ The above example would attempt to write the extracted data directly into a Cott
 "database":{
 	"selector": "JSON",
 	"writer": "JSON",
-	"host": "/output/path/for/extracted/data/jsons",
+	"host": "/output/path/for/extracted/data/jsons"
 }
 ```
