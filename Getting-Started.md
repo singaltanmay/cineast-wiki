@@ -1,5 +1,29 @@
 This page provides a quick example to get started with two scenarios: Working _with_ already extracted features, and working with a small multimedia collection. Both scenarios assume that you either have a jar or have executed the setup as described on the [Environment Setup](https://github.com/vitrivr/cineast/wiki/Environment-Setup) page.
 
+# Building and running Cineast
+
+There are two ways to run Cineast: using a jar built with Gradle and starting it directly from within an IDE.
+
+Additionally, Cineast has two entry points: `API` and `Standalone`. The `Standalone` entry point is used to run individual commands and automatically exits once the specified command has been completed, while the `API` entry point does not accept commands at startup, but offers a CLI and responds to queries.
+
+## Building with Gradle
+
+Generate the API jar with `gradlew cineast-api:fatJar` or the Standalone jar with `gradlew cineast-runtime:fatJar`. You can then start Cineast using a config file with `java -jar cineast-api/build/libs/cineast-api-2.5-full.jar cineast.json` or run a command using the standalone version with `java -jar cineast-runtime/build/libs/cineast-runtime-2.5-full.jar cineast.json <command>`.
+
+## Inside an IDE
+
+Starting the API is done via the `org.vitrivr.cineast.api.Main` class, which takes one argument: the config file (e.g. `cineast.json`). Depending on the configuration, this launches the WS / Rest / Proto Endpoints.
+
+To run a command directly with the Standalone entry point, use the `org.vitrivr.cineast.standalone.Main` class.
+
+Make sure that the `retriever` modules are consistent with those in your cottontail instance.
+
+## CLI / Util Commands
+
+The Cineast CLI provides a bunch of utilities for developing. Please check out `org.vitrivr.cineast.standalone.cli.CineastCli` for a complete overview. We just provide an example here.
+
+Run  with the arguments `cineast.json help` or use the command `help` from the CLI to see a complete list.
+
 # First Extraction
 
 To extract features from data, you need a cineast config file and an extraction job config file that describes the location of your data and which features to extract. The basic structure of an extraction job config file is described on the [Extraction Configuration](https://github.com/vitrivr/cineast/wiki/Extraction-Configuration) page.
@@ -48,30 +72,12 @@ import --type json --input path/to/extracted/features
 optimize
 ```
 
-# Extracted Features
+# Retrieval
 
 This scenario assumes the following:
 - You have a running [Cottontail DB](https://github.com/vitrivr/cottontaildb) instance with a `cottontaildb-data/` folder containing cineast data (segments, objects, metadata, feature data)
 
-## Starting the API ##
-
-### Using Gradle ###
-
-Generate the api jar using `gradlew cineast-api:fatJar`. You can then start cineast using a config file with `java -jar cineast-api/build/libs/cineast-api-2.5-full.jar cineast.json`
-
-### Inside an IDE ###
-
-Starting the API is done via the `org.vitrivr.cineast.api.Main` class, which takes one argument: the config file (e.g. `cineast.json`). Depending on the configuration, this launches the WS / Rest / Proto Endpoints.
-
-Make sure that the `retriever` modules are consistent with those in your cottontail instance.
-
-## CLI / Util Commands
-
-The Cineast CLI provides a bunch of utilities for developing. Please check out `org.vitrivr.cineast.standalone.cli.CineastCli` for a complete overview. We just provide an example here.
-
-Run `org.vitrivr.cineast.standalone.Main` with the arguments `cineast.json help` to see a complete list.
-
-### Retrieve Information about a Segment
+## Retrieve Information about a Segment
 
 To retrieve all metadata and features of a segment, use the `org.vitrivr.cineast.standalone.Main` class with the arguments `cineast.json retrieve-single --segmentid v_02497_13`, where the first argument is the config, the second the command and the third one provides the segmentid you want to know more about.
 
