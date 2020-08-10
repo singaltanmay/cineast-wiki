@@ -30,6 +30,11 @@ To extract features from data, you need a cineast config file and an extraction 
 
 The following instructions assume that you are executing the commands from inside the Cineast API CLI started with the cineast config file as the only argument e.g. `java -jar path/to/cineast_api.jar cineast.json`. If you are using the Standalone version of Cineast, you can perform the same commands by appending them to `java -jar path/to/cineast_standalone.jar cineast.json`.
 
+
+## Best Practices
+The following sections are only a guide for simple extraction of small-scale collections. For larger collections, be aware that we recommend using external parallelism for the time being (see [#115](https://github.com/vitrivr/cineast/issues/115)). For distributed extraction, we recommend extracting everything first to JSON / PROTO and then importing at the end. This is easier to back up and more reliant.
+
+
 ## Extracting directly to Cottontail DB
 
 In the most simple use case, features are extracted directly into a running Cottontail DB instance. The instructions to set up and run Cottontail DB can be found [on its GitHub page](https://github.com/vitrivr/cottontaildb).
