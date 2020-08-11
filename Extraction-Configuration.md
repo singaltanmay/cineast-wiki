@@ -64,6 +64,6 @@ The above example would attempt to write the extracted data directly into a Cott
 If you wish to only extract a specific type of media, e.g. image sequences, then specify the type in the top-level config.
 Otherwise, the extraction will process all media content in the given folder. 
 ```json
-"type": "imagesequence"
+"type": "IMAGE_SEQUENCE"
 ```
 For a full list of supported types, see [`org.vitrivr.cineast.core.data.MediaType`](https://github.com/vitrivr/cineast/blob/master/src/org/vitrivr/cineast/core/data/MediaType.java).
