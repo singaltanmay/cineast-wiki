@@ -61,9 +61,14 @@ The above example would attempt to write the extracted data directly into a Cott
 ```
 
 ## Type
-If you wish to only extract a specific type of media, e.g. image sequences, then specify the type in the top-level config.
-Otherwise, the extraction will process all media content in the given folder. 
+
+By default, Cineast tries to extract all types of media it finds in the specified data location and will apply each feature extractor to all file types it supports. If you wish to only extract a specific type of media, e.g. image sequences, then specify the type in the top-level config, e.g.:
 ```json
 "type": "IMAGE_SEQUENCE"
 ```
+
 For a full list of supported types, see [`org.vitrivr.cineast.core.data.MediaType`](https://github.com/vitrivr/cineast/blob/master/src/org/vitrivr/cineast/core/data/MediaType.java).
+
+### Image Sequences
+
+Image sequences are an exception to the default extraction behavior in that they are not extracted by default and must be explicitly specified as type. In the absence of the `type` field, image sequence directories are treated as directories of independent images. Since directories of independent images may be indistinguishable from image sequence directories, these two types of directories must be extracted through separate extraction configurations to avoid one type being processed as the other.
