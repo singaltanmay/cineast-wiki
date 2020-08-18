@@ -1,6 +1,7 @@
 To extract features from data for use with Cineast, an extraction job config JSON file must be used.
+A few simple example extraction job configuration files can be found [here](https://github.com/vitrivr/cineast-config-examples).
 
-Here is a very basic example of such a job config file:
+Here is a very basic example of such a job configuration file:
 ```json
 {
 	"input": {
