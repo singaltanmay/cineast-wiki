@@ -1,8 +1,8 @@
-This page provides a quick example to get started with two scenarios: Working _with_ already extracted features, and working with a small multimedia collection. Both scenarios assume that you either have a jar or have executed the setup as described on the [Environment Setup](https://github.com/vitrivr/cineast/wiki/Environment-Setup) page.
+This page provides a quick example to get started with two scenarios: Working with _already_ extracted features, and working with a small multimedia collection. Both scenarios assume that you either have a jar or have executed the setup as described on the [Environment Setup](https://github.com/vitrivr/cineast/wiki/Environment-Setup) page.
 
 # Building and running Cineast
 
-There are two ways to run Cineast: using a jar built with Gradle and starting it directly from within an IDE.
+There are two ways to run Cineast: using a jar built with Gradle or starting it directly from within an IDE.
 
 Additionally, Cineast has two entry points: `API` and `Standalone`. The `Standalone` entry point is used to run individual commands and automatically exits once the specified command has been completed, while the `API` entry point does not accept commands at startup, but offers a CLI and responds to queries.
 
@@ -44,11 +44,12 @@ In the most simple use case, features are extracted directly into a running Cott
 setup --extraction extraction_config.json
 ```
 If the database already contains existing data or a schema you would like to remove, additionally append the option `--clean`.
+
 2. Run the data extraction:
 ```
 extract --extraction extraction_config.json
 ```
-3. Post-process features in Cottontail DB (this step is necessary to allow the retrieval of features through Cineast):
+**Note:** Features extracted into Cottontail DB must be post-processed to allow retrieval through Cineast, however, this is performed by default after the `extract` command. In case automatic optimization was disabled with the `--no-finalize` flag, this can be manually invoked with:
 ```
 optimize
 ```
@@ -72,7 +73,7 @@ setup --extraction extraction_config.json
 ```
 import --type json --input path/to/extracted/features
 ```
-3. Post-process features in Cottontail DB:
+**Note:** Features imported into Cottontail DB must be post-processed to allow retrieval through Cineast, however, this is performed by default after the `import` command. In case automatic optimization was disabled with the `--no-finalize` flag, this can be manually invoked with:
 ```
 optimize
 ```
