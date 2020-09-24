@@ -27,6 +27,6 @@ $> ./gradlew clean generateProto
 
 2. Download external files, such as codebooks by executing
 ```
-$> gradlew getExternalFiles
+$> ./gradlew getExternalFiles
 ````
-You're now ready! Proceed with the [Getting Started](https://github.com/vitrivr/cineast/wiki/Getting-Started) page
+You're now ready! Proceed with the [Getting Started](https://github.com/vitrivr/cineast/wiki/Getting-Started) page.
