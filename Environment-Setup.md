@@ -14,19 +14,14 @@ You should now have a running instance of CottontailDB. To install cineast, proc
 1. Clone [Cineast](https://github.com/vitrivr/cineast.git)
 
 ```
-$> git clone --recursive https://github.com/vitrivr/cineast.git
-```
-(If you've already cloned cineast without the recursive flag, execute ```git submodule update --init --recursive```)
-
-4. Open Cineast with your IDE supporting Gradle (we recommend IntelliJ)
-
-5. Generate the protobuf bindings using Gradle:
-```
-$> ./gradlew clean generateProto
+$> git clone https://github.com/vitrivr/cineast.git
 ```
 
-2. Download external files, such as codebooks by executing
+2. **(Optional)** Open Cineast with your IDE supporting Gradle (we recommend IntelliJ)
+
+3. Download external files, such as codebooks by executing
 ```
 $> ./gradlew getExternalFiles
 ````
+
 You're now ready! Proceed with the [Getting Started](https://github.com/vitrivr/cineast/wiki/Getting-Started) page.
