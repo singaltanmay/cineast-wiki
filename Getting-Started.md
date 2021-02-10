@@ -8,7 +8,7 @@ Additionally, Cineast has two entry points: `API` and `Standalone`. The `Standal
 
 ## Building with Gradle
 
-Generate the API jar with `gradlew cineast-api:fatJar` or the Standalone jar with `gradlew cineast-runtime:fatJar`. You can then start Cineast using a config file with `java -jar cineast-api/build/libs/cineast-api-x.x-full.jar cineast.json` or run a command using the standalone version with `java -jar cineast-runtime/build/libs/cineast-runtime-x.x-full.jar cineast.json <command>`.
+Generate the API jar with `gradlew cineast-api:shadowJar` or the Standalone jar with `gradlew cineast-runtime:shadowJar`. You can then start Cineast using a config file with `java -jar cineast-api/build/libs/cineast-api-x.x-full.jar cineast.json` or run a command using the standalone version with `java -jar cineast-runtime/build/libs/cineast-runtime-x.x-full.jar cineast.json <command>`.
 
 ## Building with an IDE
 
