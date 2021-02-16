@@ -4,11 +4,13 @@ This page provides a quick example to get started with two scenarios: Working wi
 
 There are two ways to run Cineast: using a jar built with Gradle or starting it directly from within an IDE.
 
-Additionally, Cineast has two entry points: `API` and `Standalone`. The `Standalone` entry point is used to run individual commands and automatically exits once the specified command has been completed, while the `API` entry point does not accept commands at startup, but offers a CLI and responds to queries.
+Additionally, Cineast has two entry points (jars): `API` and `Standalone`. The `Standalone` entry point is used to run individual commands and automatically exits once the specified command has been completed (but does not start API endpoints), while the `API` entry point does not accept commands at startup, but offers a CLI with the same functionality as the `Standalone` entry point and responds to Websocket / REST queries.
+
+If you plan on using Cineast with vitrivr-ng, use the `API` entry point.
 
 ## Building with Gradle
 
-Generate the API jar with `gradlew cineast-api:shadowJar` or the Standalone jar with `gradlew cineast-runtime:shadowJar`. You can then start Cineast using a config file with `java -jar cineast-api/build/libs/cineast-api-x.x-full.jar cineast.json` or run a command using the standalone version with `java -jar cineast-runtime/build/libs/cineast-runtime-x.x-full.jar cineast.json <command>`.
+Generate the API jar with `gradlew cineast-api:shadowJar` or the Standalone jar with `gradlew cineast-runtime:shadowJar`. You can then start Cineast using a config file with `java -jar cineast-api/build/libs/cineast-api-x.x-full.jar cineast.json` or run a command using the standalone version with `java -jar cineast-runtime/build/libs/cineast-runtime-x.x-full.jar cineast.json <command>`. Remember that the standalone version does not offer API endpoints for vitrivr-ng or other frontends.
 
 ## Building with an IDE
 
