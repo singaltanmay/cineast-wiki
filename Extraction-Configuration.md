@@ -68,7 +68,7 @@ By default, Cineast tries to extract all types of media it finds in the specifie
 "type": "IMAGE_SEQUENCE"
 ```
 
-For a full list of supported types, see [`org.vitrivr.cineast.core.data.MediaType`](https://github.com/vitrivr/cineast/blob/master/src/org/vitrivr/cineast/core/data/MediaType.java).
+For a full list of supported types, see [`org.vitrivr.cineast.core.data.MediaType`](https://github.com/vitrivr/cineast/blob/master/cineast-core/src/main/java/org/vitrivr/cineast/core/data/MediaType.java).
 
 ### Image Sequences
 
