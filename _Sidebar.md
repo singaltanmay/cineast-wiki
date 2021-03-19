@@ -18,3 +18,5 @@
     * [[WS API Ping]]
   * [[OpenAPI REST API]]
   * [[Objects Glossary]]
+* CLI
+  * [[CLI Retrieval]]
