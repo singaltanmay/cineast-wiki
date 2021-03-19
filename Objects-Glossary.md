@@ -1,3 +1,5 @@
+** Note: This page has last been updated in 2019 **
+
 Both REST & WebSocket API uses various JSON Objects for query & results. This page lists all shared objects model and their field descriptions for reference. A link to the object description on this page will be available in the whole API Docs wherever that particular object is being used.
 
 ## Credentials
