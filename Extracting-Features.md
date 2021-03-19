@@ -12,6 +12,8 @@ The following sections are only a guide for simple extraction of small-scale col
 
 In the most simple use case, features are extracted directly into a running Cottontail DB instance. The instructions to set up and run Cottontail DB can be found [on its GitHub page](https://github.com/vitrivr/cottontaildb).
 
+From this point on, we assume you have create a custom extraction file called `extraction_config.json`
+
 1. Set up the database schema for the extracted features:
 ```
 setup --extraction extraction_config.json
@@ -22,3 +24,14 @@ If the database already contains existing data or a schema you would like to rem
 ```
 extract --extraction extraction_config.json
 ```
+
+## Troubleshooting
+
+### How can I check if my data has been extracted successfully?
+- You can execute a query, i.e. in vitrivr-ng.
+- You can check the contents of Cottontail DB using its CLI. For example, enter the command `query count cineast.cineast_segment` in the CLI (v0.12.0) to see how many segments are in the database. Use `help` to get more information about the Cottontail CLI.
+
+### I extracted some data twice. What do I do?
+- You can simply clean all extracted data by running `setup --extraction extraction_config.json --clean` and then re-extract data.
+- You can manually tinker with your cottontaildb data.
+- If you are extracting large collections, think about [Extracting to an Intermediary Format](https://github.com/vitrivr/cineast/wiki/Extraction-to-File-and-Import)
