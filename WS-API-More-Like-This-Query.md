@@ -1,0 +1,93 @@
+## Message Type
+[`Q_MLT`](Message-Type-Glossary#q_mlt)
+
+## Description
+Search for more segments which are like provided segment's segment ID.
+
+## Request Description
+* A [`MoreLikeThisQuery`](Objects-Glossary#morelikethisquery) message is to be sent for query.
+
+
+## Example Request Message
+```json
+{
+  "segmentId": "i_iG9qUCIPLRWr8zvY_1",
+  "categories": [ "localcolor" ],
+  "messageType": "Q_MLT"
+}
+```
+
+## Example Response Messages
+```json
+{
+  "queryId": "b7d41eb8-d14a-4029-9f1b-19cadd09b8cf",
+  "messageType": "QR_START"
+}
+
+{
+  "content": [
+    {"segmentId":"i_iG9qUCIPLRWr8zvY_1","objectId":"i_iG9qUCIPLRWr8zvY","start":0,"end":0,"startabs":0.0,"endabs":0.0,"sequenceNumber":1,"count":1},
+    {"segmentId":"i_EWl4f23vAlZ66okc_1","objectId":"i_EWl4f23vAlZ66okc","start":0,"end":0,"startabs":0.0,"endabs":0.0,"sequenceNumber":1,"count":1},
+    {"segmentId":"i_FY2grSrjXYT7JJcN_1","objectId":"i_FY2grSrjXYT7JJcN","start":0,"end":0,"startabs":0.0,"endabs":0.0,"sequenceNumber":1,"count":1},
+    {"segmentId":"i_ezec2nn4mynGHSes_1","objectId":"i_ezec2nn4mynGHSes","start":0,"end":0,"startabs":0.0,"endabs":0.0,"sequenceNumber":1,"count":1},
+    {"segmentId":"i_9ZkTXIT2916JCrbU_1","objectId":"i_9ZkTXIT2916JCrbU","start":0,"end":0,"startabs":0.0,"endabs":0.0,"sequenceNumber":1,"count":1},
+    {"segmentId":"i_A4sdAf4Wy89TQ84I_1","objectId":"i_A4sdAf4Wy89TQ84I","start":0,"end":0,"startabs":0.0,"endabs":0.0,"sequenceNumber":1,"count":1},
+    {"segmentId":"i_3GB3sNdQd4w7WjcT_1","objectId":"i_3GB3sNdQd4w7WjcT","start":0,"end":0,"startabs":0.0,"endabs":0.0,"sequenceNumber":1,"count":1},
+    {"segmentId":"i_xzlhDn9baGyQdmAn_1","objectId":"i_xzlhDn9baGyQdmAn","start":0,"end":0,"startabs":0.0,"endabs":0.0,"sequenceNumber":1,"count":1},
+    {"segmentId":"i_B4629NLw9Lgp5to6_1","objectId":"i_B4629NLw9Lgp5to6","start":0,"end":0,"startabs":0.0,"endabs":0.0,"sequenceNumber":1,"count":1},
+    {"segmentId":"i_dfPuM6Tvih4K7YDD_1","objectId":"i_dfPuM6Tvih4K7YDD","start":0,"end":0,"startabs":0.0,"endabs":0.0,"sequenceNumber":1,"count":1}
+  ],
+  "queryId": "b7d41eb8-d14a-4029-9f1b-19cadd09b8cf",
+  "messageType": "QR_SEGMENT"
+}
+
+{
+  "content": [
+    {"objectId":"i_iG9qUCIPLRWr8zvY","name":"Stunning Computer background image for high definition display monitor 713 - EgR6Tnr HD Desktop Wallpaper.jpg","path":"Stunning Computer background image for high definition display monitor 713 - EgR6Tnr HD Desktop Wallpaper.jpg","mediatype":"IMAGE","contentURL":"/home/vitrivr/vitrivr-ng/dist/dataStunning Computer background image for high definition display monitor 713 - EgR6Tnr HD Desktop Wallpaper.jpg"},
+    {"objectId":"i_EWl4f23vAlZ66okc","name":"Stunning Computer background image for high definition display monitor 706 - zUYJxnJ HD Desktop Wallpaper.jpg","path":"Stunning Computer background image for high definition display monitor 706 - zUYJxnJ HD Desktop Wallpaper.jpg","mediatype":"IMAGE","contentURL":"/home/vitrivr/vitrivr-ng/dist/dataStunning Computer background image for high definition display monitor 706 - zUYJxnJ HD Desktop Wallpaper.jpg"},
+    {"objectId":"i_FY2grSrjXYT7JJcN","name":"Stunning Computer background image for high definition display monitor 0712 - TrSCBIg HD Desktop Wallpaper.jpg","path":"Stunning Computer background image for high definition display monitor 0712 - TrSCBIg HD Desktop Wallpaper.jpg","mediatype":"IMAGE","contentURL":"/home/vitrivr/vitrivr-ng/dist/dataStunning Computer background image for high definition display monitor 0712 - TrSCBIg HD Desktop Wallpaper.jpg"},
+    {"objectId":"i_ezec2nn4mynGHSes","name":"Stunning Computer background image for high definition display monitor 0707 - LOwW1X7 HD Desktop Wallpaper.jpg","path":"Stunning Computer background image for high definition display monitor 0707 - LOwW1X7 HD Desktop Wallpaper.jpg","mediatype":"IMAGE","contentURL":"/home/vitrivr/vitrivr-ng/dist/dataStunning Computer background image for high definition display monitor 0707 - LOwW1X7 HD Desktop Wallpaper.jpg"},
+    {"objectId":"i_9ZkTXIT2916JCrbU","name":"Stunning Computer background image for high definition display monitor 707 - iMiatJq HD Desktop Wallpaper.jpg","path":"Stunning Computer background image for high definition display monitor 707 - iMiatJq HD Desktop Wallpaper.jpg","mediatype":"IMAGE","contentURL":"/home/vitrivr/vitrivr-ng/dist/dataStunning Computer background image for high definition display monitor 707 - iMiatJq HD Desktop Wallpaper.jpg"},
+    {"objectId":"i_A4sdAf4Wy89TQ84I","name":"Stunning Computer background image for high definition display monitor 0711 - PaTBrNY HD Desktop Wallpaper.jpg","path":"Stunning Computer background image for high definition display monitor 0711 - PaTBrNY HD Desktop Wallpaper.jpg","mediatype":"IMAGE","contentURL":"/home/vitrivr/vitrivr-ng/dist/dataStunning Computer background image for high definition display monitor 0711 - PaTBrNY HD Desktop Wallpaper.jpg"},
+    {"objectId":"i_3GB3sNdQd4w7WjcT","name":"Stunning Computer background image for high definition display monitor 0707 - KkjQP7G HD Desktop Wallpaper.jpg","path":"Stunning Computer background image for high definition display monitor 0707 - KkjQP7G HD Desktop Wallpaper.jpg","mediatype":"IMAGE","contentURL":"/home/vitrivr/vitrivr-ng/dist/dataStunning Computer background image for high definition display monitor 0707 - KkjQP7G HD Desktop Wallpaper.jpg"},
+    {"objectId":"i_xzlhDn9baGyQdmAn","name":"Stunning Computer background image for high definition display monitor 0711 - YQdOoOq HD Desktop Wallpaper.jpg","path":"Stunning Computer background image for high definition display monitor 0711 - YQdOoOq HD Desktop Wallpaper.jpg","mediatype":"IMAGE","contentURL":"/home/vitrivr/vitrivr-ng/dist/dataStunning Computer background image for high definition display monitor 0711 - YQdOoOq HD Desktop Wallpaper.jpg"},
+    {"objectId":"i_B4629NLw9Lgp5to6","name":"Stunning Computer background image for high definition display monitor 0708 - dP700Wa HD Desktop Wallpaper.jpg","path":"Stunning Computer background image for high definition display monitor 0708 - dP700Wa HD Desktop Wallpaper.jpg","mediatype":"IMAGE","contentURL":"/home/vitrivr/vitrivr-ng/dist/dataStunning Computer background image for high definition display monitor 0708 - dP700Wa HD Desktop Wallpaper.jpg"},
+    {"objectId":"i_dfPuM6Tvih4K7YDD","name":"Stunning Computer background image for high definition display monitor 705 - VovPbOH HD Desktop Wallpaper.jpg","path":"Stunning Computer background image for high definition display monitor 705 - VovPbOH HD Desktop Wallpaper.jpg","mediatype":"IMAGE","contentURL":"/home/vitrivr/vitrivr-ng/dist/dataStunning Computer background image for high definition display monitor 705 - VovPbOH HD Desktop Wallpaper.jpg"}
+  ],
+  "queryId": "b7d41eb8-d14a-4029-9f1b-19cadd09b8cf",
+  "messageType": "QR_OBJECT"
+}
+
+{
+  "content": [
+    {"key":"i_iG9qUCIPLRWr8zvY_1","value":0.5134099616858238},
+    {"key":"i_EWl4f23vAlZ66okc_1","value":0.030373626291153085},
+    {"key":"i_FY2grSrjXYT7JJcN_1","value":0.029869104909389523},
+    {"key":"i_ezec2nn4mynGHSes_1","value":0.02768611932452207},
+    {"key":"i_9ZkTXIT2916JCrbU_1","value":0.027359305295451466},
+    {"key":"i_A4sdAf4Wy89TQ84I_1","value":0.022855250714137038},
+    {"key":"i_3GB3sNdQd4w7WjcT_1","value":0.018759869497277162},
+    {"key":"i_xzlhDn9baGyQdmAn_1","value":0.011986429180550736},
+    {"key":"i_B4629NLw9Lgp5to6_1","value":0.011216291427240269},
+    {"key":"i_dfPuM6Tvih4K7YDD_1","value":0.01116715244371847}
+  ],
+  "queryId": "b7d41eb8-d14a-4029-9f1b-19cadd09b8cf",
+  "category": "localcolor",
+  "messageType": "QR_SIMILARITY"
+}
+
+{
+  "queryId": "b7d41eb8-d14a-4029-9f1b-19cadd09b8cf",
+  "messageType": "QR_END"
+}
+```
+
+## Response Description
+* The more-like-this query result will consist of a series of messages.
+* The first message will be of type [`QueryStart`](Objects-Glossary#querystart) & the last message will be of type [`QueryEnd`](Objects-Glossary#queryend).
+* A message group consist of 3 messages of type viz. [`SegmentQueryResult`](Objects-Glossary#segmentqueryresult), [`ObjectQueryResult`](Objects-Glossary#objectqueryresult) & [`SimilarityQueryResult`](Objects-Glossary#similarityqueryresult) which give results about a particular category (specified in [`SimilarityQueryResult`](Objects-Glossary#similarityqueryresult)).
+* It implies that if the categories specified in the request are N in number, total messages which will be received will be 3N + 2 (2 for [`QueryStart`](Objects-Glossary#querystart) & [`QueryEnd`](Objects-Glossary#queryend)).
+* [`SegmentQueryResult`](Objects-Glossary#segmentqueryresult) in a message group will have details about the segments matched within that category in [`SegmentDescriptor`](Objects-Glossary#segmentdescriptor) objects.
+* [`ObjectQueryResult`](Objects-Glossary#objectqueryresult) in a message group will have details about the objects for all the segments in [`SegmentQueryResult`](Objects-Glossary#segmentqueryresult) in [`MultimediaObjectDescriptor`](Objects-Glossary#multimediaobjectdescriptor) objects.
+* [`SimilarityQueryResult`](Objects-Glossary#similarityqueryresult) in a message group will have details about all the segments along with their matched value & the `category` of this message group.
+
