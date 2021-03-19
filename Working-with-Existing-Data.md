@@ -11,4 +11,4 @@ We should provide Cineast config files in the same download-path as the datasets
 
 ## Frontend Setup
 
-For most datasets, we should have the media and thumbnails on a Node accessible within the VPN. Ask your supervisor for a local copy.
+For most datasets, we should have the media and thumbnails on a node accessible within the VPN. Ask your supervisor for a local copy.
