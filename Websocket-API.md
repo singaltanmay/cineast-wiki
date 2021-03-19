@@ -12,9 +12,8 @@ ws://localhost:4567/api/v1/websocket
 * All messages have a messageType attribute which specifies the type of message.
 
 ## Messages
-Cineast currently supports 5 types of query/lookup messages via WebSocket API. They are:
-* [[Status Check|WebSocket-API-:-Ping-Server]]: Ping the server to get the server status.
-* [[Similarity Query|WebSocket-API-:-Similarity-Query]]: Perform a similarity query.
-* [[More-Like-This Query|WebSocket-API-:-More-Like-This-Query]]: Perform a more-like-this query.
-* [[Neighbouring Query|WebSocket-API-:-Neighboring-Segment-Query]]: Perform a neighboring segment query.
-* [[Metadata Lookup|WebSocket-API-:-Metadata-Lookup]]: Perform metadata lookup.
+Cineast currently supports 4 types of query/lookup messages via WebSocket API. They are:
+* [[Status Check|WS API Ping]]: Ping the server to get the server status.
+* [[Similarity Query|WS API Similarity Query]]: Perform a similarity query.
+* [[More-Like-This Query|WS API More Like This Query]]: Perform a more-like-this query.
+* [[Neighbouring Query|WS API Neighboring Segment Query]]: Perform a neighboring segment query.
