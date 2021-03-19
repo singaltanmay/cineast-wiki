@@ -1,8 +1,8 @@
 # Full Stack vitrivr
 
-This guide explains how to set up [Cineast](https://github.com/vitrivr/cineast) in a way, that the full [vitrivr](https://vitrivr.org) stack is functional for __retrieval__ (also known as __online__ mode).
+This guide explains how to set up [Cineast](https://github.com/vitrivr/cineast) so that it serves media, thumbnails and the frontend. Alternatively, you can host both vitrivr-ng and media / thumbnails via a webserver. 
 
-After following these steps, you should have a running Cineast instace, that also serves vitrivr's UI, [vitrivr-ng](https://github.com/vitrivr/vitrivr-ng) and the media files.
+After following these steps, you should have a running Cineast instance, that also serves vitrivr's UI, [vitrivr-ng](https://github.com/vitrivr/vitrivr-ng) and the media files.
 
 ## Prerequisites
 
