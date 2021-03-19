@@ -1,4 +1,4 @@
-This page provides a quick example to get started with two scenarios: Working with _already_ extracted features, and working with a small multimedia collection. Both scenarios assume that you either have a jar or have executed the setup as described on the [Environment Setup](https://github.com/vitrivr/cineast/wiki/Environment-Setup) page.
+This page provides a quick example to get started assuming you've followed the steps on the [Environment Setup](https://github.com/vitrivr/cineast/wiki/Environment-Setup) page.
 
 # Building and running Cineast
 
