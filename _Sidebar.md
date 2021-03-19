@@ -10,4 +10,6 @@
   * [[Feature Modules]]
 * Advanced
   * [[Extraction to File and Import]]
+* API Documentation
+  * [[Websocket API]]
   * [[OpenAPI REST API]]
