@@ -7,7 +7,7 @@
 Executes the temporal-query based on the [`TemporalQueryComponent`](Objects-Glossary#temporalquerycomponent) objects provided in the [`TemporalQuery`](Objects-Glossary#temporalquery).
 
 ## Request Description
-* A [`TemporalQuery`](Objects-Glossary#temporalquery) message is to be sent for query.
+* A [`TemporalQuery`](Objects-Glossary#temporalquery) message is to be sent for a query.
 * A [`TemporalQuery`](Objects-Glossary#temporalquery) can chain any number of queries together that will be individually evaluated and return an independent [`SimilarityQueryResult`](Objects-Glossary#similarityqueryresult) with its own `containerId` which is assigned with positive integers starting from 0.
 
 ## Example Request Message
@@ -143,7 +143,7 @@ Executes the temporal-query based on the [`TemporalQueryComponent`](Objects-Glos
 * The first message will be of type [`QueryStart`](Objects-Glossary#querystart) & the last message will be of type [`QueryEnd`](Objects-Glossary#queryend).
 * Between the [`QueryStart`](Objects-Glossary#querystart) & the last message will be of type [`QueryEnd`](Objects-Glossary#queryend) & [`QueryEnd`](Objects-Glossary#queryend) messages, there will be message groups.
 * A message group consist of 3 messages of type viz. [`SegmentQueryResult`](Objects-Glossary#segmentqueryresult), [`ObjectQueryResult`](Objects-Glossary#objectqueryresult) & [`SimilarityQueryResult`](Objects-Glossary#similarityqueryresult) which give results about a particular category (specified in [`SimilarityQueryResult`](Objects-Glossary#similarityqueryresult)).
-* It implies that if the total number of categories over all categories specified in the request are N in number, total messages which will be received will be 3N + 2 (2 for [`QueryStart`](Objects-Glossary#querystart) & [`QueryEnd`](Objects-Glossary#queryend)).
+* It implies that if the total number of categories overall categories specified in the request are N in number, total messages which will be received will be 3N + 2 (2 for [`QueryStart`](Objects-Glossary#querystart) & [`QueryEnd`](Objects-Glossary#queryend)).
 * [`SegmentQueryResult`](Objects-Glossary#segmentqueryresult) in a message group will have details about the segments matched within that category in [`SegmentDescriptor`](Objects-Glossary#segmentdescriptor) objects.
 * [`ObjectQueryResult`](Objects-Glossary#objectqueryresult) in a message group will have details about the objects for all the segments in [`SegmentQueryResult`](Objects-Glossary#segmentqueryresult) in [`MultimediaObjectDescriptor`](Objects-Glossary#multimediaobjectdescriptor) objects.
 * [`SimilarityQueryResult`](Objects-Glossary#similarityqueryresult) in a message group will have details about all the segments along with their matched value, the `category` of this message group, and to which of the temporal queries the result belongs, indicated with `containerId`.
