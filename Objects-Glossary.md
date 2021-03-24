@@ -51,7 +51,7 @@ Hints : Enum {
 
 
 ## IdList
-Contains a list of ids which can be used as a payload in request.
+Contains a list of ids that can be used as a payload in request.
 
 ```
 IdList : Object
@@ -82,7 +82,7 @@ MetadataLookup : Object
   "messageType": "<a href="Message-Type-Glossary#m_lookup">M_LOOKUP</a>"
 }
 </pre>
-* `objectids` is a list of object ID's for which metadata should be looked up.
+* `objectids` is a list of object IDs for which metadata should be looked up.
 * `domains` is a list of metadata domains that should be considered. If empty, all domains are considered!
 * `messageType` is always [`M_LOOKUP`](Message-Type-Glossary#m_lookup).
 
@@ -150,12 +150,12 @@ MultimediaObjectDescriptor : Object
 </pre>
 * `objectId` uniquely identifies a given `MultimediaObjectDescriptor` object.
 * `name` is the name of the multimedia object.
-* `path` is the path of multimedia object known to Cineast.
+* `path` is the path of a multimedia object known to Cineast.
 * `mediaType` is the type of multimedia the object is.
 * `contentURL` is the absolute path of the multimedia object.
 
 ## NeighboringSegmentQuery
-This object represents a NeighboringSegmentQuery message, i.e. a request for a neighbour-search.
+This object represents a NeighboringSegmentQuery message, i.e. a request for a neighbor-search.
 
 <pre>
 NeighboringSegmentQuery : Object
@@ -172,7 +172,7 @@ NeighboringSegmentQuery : Object
 * `messageType` is always `<a href="Message-Type-Glossary#q_neseg">Q_NESEG</a>`.
 
 ## ObjectQueryResult
-This object contains list of [`MultimediaObjectDescriptors`](Objects-Glossary#multimediaobjectdescriptor) & is received as a part of query results.
+This object contains a list of [`MultimediaObjectDescriptors`](Objects-Glossary#multimediaobjectdescriptor) & is received as a part of query results.
 
 <pre>
 ObjectQueryResult : Object
@@ -200,7 +200,7 @@ PingRequest : Object
 * `messageType` is always [`PING`](Message-Type-Glossary#ping) to specify it's a ping request.
 
 ## PingResponse
-An object received which contains ping status of the server.
+An object received contains the ping status of the server.
 
 <pre>
 PingResponse : Object
@@ -213,7 +213,7 @@ PingResponse : Object
 * `messageType` is always [`PING`](Message-Type-Glossary#ping).
 
 ## PingStatus
-An enum which specifies the all the ping status of the server.
+An enum that specifies all the ping status of the server.
 
 ```
 PingStatus : Enum
@@ -222,7 +222,7 @@ PingStatus : Enum
 }
 ```
 
-## TemporalQueryComponent
+## TemporalQueryComponent
 It represents a query container with multiple [`QueryComponent`](Objects-Glossary#querycomponent).
 
 <pre>
@@ -267,11 +267,11 @@ QueryEnd : Object
   "messageType": "<a href="Message-Type-Glossary#qr_end">QR_END</a>"
 }
 </pre>
-* `queryId` will be same as what was in the request if specified or else will be randomly generated.
+* `queryId` will be the same as what was in the request if specified or else will be randomly generated.
 * `messageType` will always be [`QR_END`](Message-Type-Glossary#qr_end).
 
 ## QueryError
-This object is receieved if an error occurs during retrieval.
+This object is received if an error occurs during retrieval.
 
 <pre>
 QueryError : Object
@@ -281,7 +281,7 @@ QueryError : Object
   "messageType": "<a href="Message-Type-Glossary#qr_error">QR_ERROR</a>"
 }
 </pre>
-* `queryId` will be same as what was in the request if specified or else will be randomly generated.
+* `queryId` will be the same as what was in the request if specified or else will be randomly generated.
 * `message` is the error message.
 * `messageType` is always [`QR_ERROR`](Message-Type-Glossary#qr_error).
 
@@ -315,7 +315,7 @@ TAG | <ul><li>Must be a valid Data URI.</li><li>Format : "data:application/json;
 The categories are the collection of features to search for. They can be found [here](https://github.com/vitrivr/cineast/blob/master/cineast.json). All the nodes in `features` block in `retriever` block are categories with subnodes being the features belonging to that particular category.
 
 ## QueryTermType
-An Enum which tells the type of a query term.
+An Enum tells the type of query term.
 
 ```
 QueryTermType : Enum
@@ -334,7 +334,7 @@ QueryStart : Object
   "messageType": "<a href="Message-Type-Glossary#qr_start">QR_START</a>"
 }
 </pre>
-* `queryId` will be same as what was in the request if specified or else will be randomly generated.
+* `queryId` will be the same as what was in the request if specified or else will be randomly generated.
 * `messageType` will always be [`QR_START`](Message-Type-Glossary#qr_start).
 
 ## SegmentDescriptor
@@ -360,10 +360,10 @@ SegmentDescriptor : Object
 * `startabs` tells the absolute starting time (in s) of this segment if applicable else is 0.
 * `endabs` tells the absolute ending time (in s) of this segment if applicable else is 0.
 * `sequenceNumber` is the segment's sequence number. All segments of an object have incremental sequence number starting from 1.
-* `count` is the total frames in this segment.
+* `count` is the total number of frames in this segment.
 
 ## SegmentQueryResult
-This object contains list of [`SegmentDescriptors`](Objects-Glossary#segmentdescriptor) & is received as a part of query results.
+This object contains a list of [`SegmentDescriptors`](Objects-Glossary#segmentdescriptor) & is received as a part of query results.
 
 <pre>
 SegmentQueryResult : Object
@@ -408,7 +408,7 @@ SessionState : Object
 * `type` tells the type of session.
 
 ## SessionType
-An enum which tells the type of the session.
+An enum that tells the type of the session.
 
 ```
 SessionType : Enum
@@ -418,7 +418,7 @@ SessionType : Enum
 ```
 
 ## TemporalQuery
-This object represents a temporal-query message, i.e. a request for a temporal chaining of similarity-searches.
+This object represents a temporal-query message, i.e. a request for temporal chaining of similarity-searches.
 <pre>
 TemporalQuery : Object
 {
@@ -460,7 +460,7 @@ SimilarityQueryResult : Object
 </pre>
 * `content` will be a list of [`SegmentWeight`](Objects-Glossary#segmentweight).
 * `contentType` will be `org.vitrivr.cineast.core.data.StringDoublePair`.
-* `queryId` will be same as what was in the request if specified or else will be randomly generated.
+* `queryId` will be the same as what was in the request if specified or else will be randomly generated.
 * `category` is the category for which this query result is.
 * `containerId` is 0 if it is a simple similarity query or any integer of 0 and above when it is part of a [`TemporalQuery`](Objects-Glossary#temporalquery).
 * `messageType` will always be [`QR_SIMILARITY`](Message-Type-Glossary#qr_similarity).
@@ -487,7 +487,7 @@ StartSessionMessage : Object
   "credentials": <a href="Objects-Glossary#credentials">Credentials</a>
 }
 </pre>
-* `credentials` is the credentials of an added user in cineast.
+* `credentials` are the credentials of an added user in cineast.
 
 ## Tag
 A tag associated with an object.
