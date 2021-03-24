@@ -15,6 +15,10 @@ Describes that a message is of type [`MoreLikeThisQuery`](Objects-Glossary#morel
 
 Describes that a message is of type [`NeighboringSegmentQuery`](Objects-Glossary#neighboringsegmentquery). This message is used to query for more segments which are neighbors of the segment provided in the object.
 
+## Q_TEMPORAL
+**Temporal Query Message**
+Describes that a message is of type [`TemporalQuery`](Objects-Glossary#temporalquery). This message is used to temporally chain queries of the type [`SimilarityQuery`](Objects-Glossary#similarityquery).
+
 ## Q_SIM
 **Similarity Query Message**
 

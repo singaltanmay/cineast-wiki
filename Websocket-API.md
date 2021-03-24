@@ -15,5 +15,6 @@ ws://localhost:4567/api/v1/websocket
 Cineast currently supports 4 types of query/lookup messages via WebSocket API. They are:
 * [[Status Check|WS API Ping]]: Ping the server to get the server status.
 * [[Similarity Query|WS API Similarity Query]]: Perform a similarity query.
+* [[Temporal Query|WS API Temporal Query]]: Perform a similarity query.
 * [[More-Like-This Query|WS API More Like This Query]]: Perform a more-like-this query.
 * [[Neighbouring Query|WS API Neighboring Segment Query]]: Perform a neighboring segment query.

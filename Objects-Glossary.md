@@ -178,11 +178,13 @@ This object contains list of [`MultimediaObjectDescriptors`](Objects-Glossary#mu
 ObjectQueryResult : Object
 {
   "content": Array&lt;<a href="Objects-Glossary#multimediaobjectdescriptor">MultimediaObjectDescriptor</a>&gt;,
+  "contentType": String,
   "queryId": String,
   "messageType": "<a href="Message-Type-Glossary#qr_object">QR_OBJECT</a>"
 }
 </pre>
 * `content` will be a list of [`MultimediaObjectDescriptors`](Objects-Glossary#multimediaobjectdescriptor).
+* `contentType` will be `org.vitrivr.cineast.core.data.entities.MediaObjectDescriptor`.
 * `queryId` will be same as what was in the request if specified or else will be randomly generated.
 * `messageType` will always be [`QR_OBJECT`](Message-Type-Glossary#qr_object).
 
@@ -219,6 +221,17 @@ PingStatus : Enum
   UNKNOWN, OK, ERROR
 }
 ```
+
+## TemporalQueryComponent
+It represents a query container with multiple [`QueryComponent`](Objects-Glossary#querycomponent).
+
+<pre>
+QueryComponent : Object
+{
+  "stages": Array&lt;<a href="Objects-Glossary#querycomponent">QueryComponent</a>&gt;
+}
+</pre>
+* `stages` is a list of [`QueryComponents`](Objects-Glossary#querycomponent).
 
 ## QueryComponent
 It represents a query container with multiple [`QueryTerms`](Objects-Glossary#queryterm).
@@ -356,11 +369,13 @@ This object contains list of [`SegmentDescriptors`](Objects-Glossary#segmentdesc
 SegmentQueryResult : Object
 {
   "content": Array&lt;<a href="Objects-Glossary#segmentdescriptor">SegmentDescriptor</a>&gt;,
+  "contentType": String,
   "queryId": String,
   "messageType": "<a href="Message-Type-Glossary#qr_segment">QR_SEGMENT</a>"
 }
 </pre>
 * `content` will be a list of [`SegmentDescriptors`](Objects-Glossary#segmentdescriptor").
+* `contentType` will be `org.vitrivr.cineast.core.data.entities.MediaSegmentDescriptor`
 * `queryId` will be same as what was in the request if specified or else will be randomly generated.
 * `messageType` will always be [`QR_SEGMENT`](Message-Type-Glossary#qr_segment).
 
@@ -402,6 +417,19 @@ SessionType : Enum
 }
 ```
 
+## TemporalQuery
+This object represents a temporal-query message, i.e. a request for a temporal chaining of similarity-searches.
+<pre>
+TemporalQuery : Object
+{
+  "queries": Array&lt;<a href="Objects-Glossary#temporalquerycomponent">TemporalQueryComponent</a>&gt;,
+  "config": <a href="Objects-Glossary#queryconfig">QueryConfig</a>,
+  "messageType": "<a href="Message-Type-Glossary#q_temporal">Q_SIM</a>"
+}
+</pre>
+* `queries` is a list of [`TemporalQueryComponents`](Objects-Glossary#temporalquerycomponent).
+* `config` attribute is optional and can be supplied for additional query configurations.
+
 ## SimilarityQuery
 This object represents a similarity-query message, i.e. a request for a similarity-search.
 
@@ -423,14 +451,18 @@ This object contains a list of [`SegmentWeights`](Objects-Glossary#segmentweight
 SimilarityQueryResult : Object
 {
   "content": Array&lt;<a href="Objects-Glossary#segmentweight">SegmentWeight</a>&gt;,
-  "category: String,
+  "contentType": String,
   "queryId": String,
+  "category": String,
+  "containerId" Int,
   "messageType": "<a href="Message-Type-Glossary#qr_similarity">QR_SIMILARITY</a>"
 }
 </pre>
 * `content` will be a list of [`SegmentWeight`](Objects-Glossary#segmentweight).
+* `contentType` will be `org.vitrivr.cineast.core.data.StringDoublePair`.
 * `queryId` will be same as what was in the request if specified or else will be randomly generated.
 * `category` is the category for which this query result is.
+* `containerId` is 0 if it is a simple similarity query or any integer of 0 and above when it is part of a [`TemporalQuery`](Objects-Glossary#temporalquery).
 * `messageType` will always be [`QR_SIMILARITY`](Message-Type-Glossary#qr_similarity).
 
 ## SimilarityResult
