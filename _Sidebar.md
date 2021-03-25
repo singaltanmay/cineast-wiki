@@ -8,6 +8,7 @@
   * [[Extracting Features]]
   * [[Extraction Configuration]]
   * [[Feature Modules]]
+  * [[Custom Features]]
 * Advanced
   * [[Extraction to File and Import]]
 * API Documentation
