@@ -1,4 +1,3 @@
-# Feature Modules
 This page lists the feature modules which Cineast uses for feature extraction and retrieval.
 
 ## Structure
