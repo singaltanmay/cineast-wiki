@@ -103,7 +103,6 @@ MelodyEstimate | TODO | TODO | TODO
 MFCCShingle | TODO | TODO | TODO
 MotionHistogram | motion | motion paths | 8-bin normalized motion histogram
 MotionHistogramBackground | TODO | TODO | TODO
-**REMOVED** MotionSum | motion | motion paths | sum of total trajectory length
 ObjectInstances | TODO | TODO | TODO
 OCRSearch | TODO | TODO | TODO
 RangeBooleanRetriever | TODO | TODO | TODO
@@ -134,7 +133,6 @@ SubDivMotionSumBackground3 | TODO | TODO | TODO
 SubDivMotionSumBackground4 | TODO | TODO | TODO
 SubDivMotionSumBackground5 | TODO | TODO | TODO
 SubtitleFulltextSearch | text | subtitles | matches sentence fragments in subtitle elements
-**REMOVED** SubtitleWordSearch | text | subtitles | matches words independent of order in subtitle elements
 SURFMirflickr25K256 | TODO | TODO | TODO
 SURFMirflickr25K512 | TODO | TODO | TODO
 TagsFtSearch | TODO | TODO | TODO
