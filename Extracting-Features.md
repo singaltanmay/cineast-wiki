@@ -5,7 +5,7 @@ To extract features from data, you need a cineast config file and an extraction 
 The following instructions assume that you are executing the commands from inside the Cineast CLI (available both in the API and standalone Jar)
 
 ## Best Practices
-The following sections are only a guide for simple extraction of small-scale collections. For larger collections, be aware that we recommend using external parallelism for the time being (see [#115](https://github.com/vitrivr/cineast/issues/115)). For distributed extraction, we recommend extracting everything first to JSON / PROTO and then importing at the end. This is easier to back up and more reliant. Consult the [corresponding Wiki page](https://github.com/vitrivr/cineast/wiki/Extraction-to-File---Import) for details.
+The following sections are only a guide for simple extraction of small-scale collections. For larger collections, be aware that we recommend using external parallelism for the time being (see [#115](https://github.com/vitrivr/cineast/issues/115)). For distributed extraction, we recommend extracting everything first to JSON / PROTO and then importing at the end. This is easier to back up and more reliant. Consult the [corresponding Wiki page](https://github.com/vitrivr/cineast/wiki/Extraction-to-File-and-Import) for details.
 
 
 ## Extracting directly to Cottontail DB
