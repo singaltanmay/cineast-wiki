@@ -1,0 +1,96 @@
+{
+  "input": {
+    "path": "path/to/download/directory",
+    "depth": 3,
+    "skip": 0,
+    "id": {
+      "name": "SequentialObjectIdGenerator",
+      "properties": {}
+    },
+    "iiif": {
+      "imageApiUrl": "https://example.com",
+      "imageApiVersion": "2.1.1",
+      "rotation": 10,
+      "items": [
+        {
+          "identifier": "image1",
+          "region": "square"
+        },
+        {
+          "identifier": "image2",
+          "rotation": 180,
+          "quality": "bitonal",
+          "format": "png"
+        }
+      ],
+      "manifestUrl": "https://example.com/manifests/identifier/manifest.json"
+    }
+  },
+  "extractors": [
+    {
+      "name": "AverageColor"
+    },
+    {
+      "name": "AverageColorARP44"
+    },
+    {
+      "name": "AverageColorCLD"
+    },
+    {
+      "name": "AverageColorGrid8"
+    },
+    {
+      "name": "AverageColorRaster"
+    },
+    {
+      "name": "AverageFuzzyHist"
+    },
+    {
+      "name": "AverageColorGrid8Reduced15"
+    },
+    {
+      "name": "CLD"
+    },
+    {
+      "name": "EdgeARP88"
+    },
+    {
+      "name": "EdgeGrid16"
+    },
+    {
+      "name": "EHD"
+    },
+    {
+      "name": "HPCP12Shingle"
+    },
+    {
+      "name": "MedianColor"
+    },
+    {
+      "name": "MedianColorGrid8"
+    },
+    {
+      "name": "HOGMirflickr25K512"
+    },
+    {
+      "name": "SURFMirflickr25K512"
+    }
+  ],
+  "exporters": [
+    {
+      "name": "ShotThumbnailsExporter",
+      "properties": {
+        "destination": "thumbnails/"
+      }
+    }
+  ],
+  "database": {
+    "writer": "COTTONTAIL",
+    "selector": "COTTONTAIL"
+  },
+  "metadata": [
+    {
+      "name": "IIIFMetaDataExtractor"
+    }
+  ]
+}
