@@ -10,6 +10,7 @@
     "iiif": {
       "imageApiUrl": "https://example.com",
       "imageApiVersion": "2.1.1",
+      "keepImagesPostExtraction": true,
       "rotation": 10,
       "items": [
         {

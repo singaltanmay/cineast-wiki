@@ -1,5 +1,46 @@
-# Working with IIIF
+# Working with IIIF resources
 Cineast supports performing extraction on IIIF resources hosted on compatible media servers. During the feature extraction process, Cineast will automatically download all the resources specified in the extraction config file to a folder on the local filesystem and perform extraction on it.
+
+## IIIF Extraction Configuration
+
+To extract features from IIIF resources for use with Cineast, an extraction job config JSON file must be used. This file must list out various IIIF job specific parameters along with other general parameters that are required by all types of Cineast extraction jobs (Extractors, Exporters, Database etc). For more information regarding configuration of an extraction job in general, please refer to [Extraction Configuration](https://github.com/vitrivr/cineast/wiki/Extraction-Configuration). We will be using a shortened version of an IIIF specific example configuration file to explain what the diffenent parameters mean. The complete config file can be found [here](https://github.com/vitrivr/cineast/wiki/iiif_extraction_config.json).
+
+
+```
+{
+  "input": {
+    "path": "path/to/download/directory",
+    ...
+    "iiif": {
+      "imageApiUrl": "...",
+      "imageApiVersion": "2.1.1",
+      "keepImagesPostExtraction": true,
+      ...
+      "items": [...],
+      ],
+      "manifestUrl": "..."
+    }
+  },
+  "metadata": [
+    {
+      "name": "IIIFMetaDataExtractor"
+    }
+  ]
+}
+
+```
+
+### `"input"` > `"path"`
+The path parameter controls where the IIIF resources will be saved when they are downloaded before extraction begins. This value will only be used if `keepImagesPostExecution` is set to `true`. If a `path` has not been specified, Cineast will store the resources in a directory named `iiif-media-${System.currentTimeMillis()}`.
+
+### `"iiif"` > `"imageApiUrl"`
+Optional parameter used to set the path of the Image API resource, If a single Image API resource is required then this can contain the complete path pointing to the resource (baseUrl and identifier). If multiple resources have to be downloaded from the same server, then this should contain the common baseUrl shared by all the resources. [More info](#image-api)
+
+### `"iiif"` > `"imageApiVersion"`
+Optional parameter used to specifiy the version of the Image API supported by the server. If the `ImageApiVersion` is not specified then Cineast will automatically try to determine the highest version of the API supported by the server. Thus, it is okay to omit this if the version is not known or if the resources are available at varying API levels.
+
+### `"iiif"` > `"keepImagesPostExtraction"`
+By default, Cineast will delete the IIIF resources post extraction. If this parameter's value is set to `true` then instead of deleting these resources, Cineast will save them to the directory specified at `"input"` > `"path"`. 
 
 ## Image API
 Cineast can donwload indivual image resources in any region, size, rotation, format and quality; provided that these parameters are supported by the server.
