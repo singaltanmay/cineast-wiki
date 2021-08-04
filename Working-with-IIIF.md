@@ -36,7 +36,7 @@ The path parameter controls where the IIIF resources will be saved when they are
 ### `"iiif"` > `"keepImagesPostExtraction"`
 By default, Cineast will delete the IIIF resources post extraction. If this parameter's value is set to `true` then instead of deleting these resources, Cineast will save them to the directory specified at `"input"` > `"path"`. 
 
-### `"iiif"` > `"region | size | rotation | quality | format"`
+### `"iiif"` > `"region" | "size" | "rotation" | "quality" | "format"`
 See [Configuring an Image API Extraction Job](#configuring-an-image-api-extraction-job)
 
 ## Image API
