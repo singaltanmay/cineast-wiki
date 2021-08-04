@@ -39,6 +39,10 @@ By default, Cineast will delete the IIIF resources post extraction. If this para
 ### `"iiif"` > `"region" | "size" | "rotation" | "quality" | "format"`
 See [Configuring an Image API Extraction Job](#configuring-an-image-api-extraction-job)
 
+
+### `"iiif"` > `"manifestUrl"`
+See [Configuring a Presentation API Extraction job](#configuring-a-presentation-api-extraction-job)
+
 ## Image API
 Cineast can donwload indivual image resources in any region, size, rotation, format and quality; provided that these parameters are supported by the server.
 
