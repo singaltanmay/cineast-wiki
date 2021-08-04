@@ -1,6 +1,6 @@
 {
   "input": {
-    "path": "path/to/download/directory",
+    "path": "iiif-media",
     "depth": 3,
     "skip": 0,
     "id": {
@@ -8,23 +8,27 @@
       "properties": {}
     },
     "iiif": {
-      "imageApiUrl": "https://example.com",
+      "imageApiUrl": "https://libimages.princeton.edu/loris/pudl0001/5138415",
       "imageApiVersion": "2.1.1",
       "keepImagesPostExtraction": true,
+      "region": "full",
+      "size": "full",
       "rotation": 10,
+      "quality": "default",
+      "format": "jpg",
       "items": [
         {
-          "identifier": "image1",
+          "identifier": "00000010.jp2",
           "region": "square"
         },
         {
-          "identifier": "image2",
+          "identifier": "00000011.jp2",
           "rotation": 180,
           "quality": "bitonal",
           "format": "png"
         }
       ],
-      "manifestUrl": "https://example.com/manifests/identifier/manifest.json"
+      "manifestUrl": "https://dms-data.stanford.edu/data/manifests/Parker/bg021sq9590/manifest.json"
     }
   },
   "extractors": [
